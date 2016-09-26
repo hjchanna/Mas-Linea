@@ -95,7 +95,7 @@ form {
     /*background-color: #4CAF50;*/
     color: white;
     padding: 8px 20px;
-    margin: 8px 0;
+    margin: 20px 0;
     border: none;
     cursor: pointer;
     width: 100%;
@@ -112,7 +112,7 @@ form {
 /* Add padding to containers */
 #login-form{
     padding: 16px;
-    margin-top: 50px;
+    margin-top: 65px;
 }
 
 /*footer*/

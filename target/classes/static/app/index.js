@@ -2,6 +2,11 @@
     //index module
     angular.module("indexModule", ["ngRoute", "loginModule", "viewModule"]);
 
+    //constants
+    angular.module("indexModule").constant("systemConfig", {
+        apiUrl: "http://localhost:8080"
+    });
+
     //route config
     angular.module("indexModule").config(function ($routeProvider) {
         $routeProvider
@@ -45,15 +50,15 @@
                     templateUrl: "app/view/view9.html",
                     controller: "viewController"
                 })
-                 .when("/view-10", {
+                .when("/view-10", {
                     templateUrl: "app/view/view10.html",
                     controller: "viewController"
                 })
-                 .when("/view-11", {
+                .when("/view-11", {
                     templateUrl: "app/view/view11.html",
                     controller: "viewController"
                 })
-                 .when("/view-12", {
+                .when("/view-12", {
                     templateUrl: "app/view/view12.html",
                     controller: "viewController"
                 })

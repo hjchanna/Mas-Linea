@@ -2,7 +2,7 @@
     angular.module("viewModule", ["ngAnimate"]);
 
 
-    var viewController = function ($scope, $rootScope, $location) {
+    var viewController = function ($scope, $rootScope,systemConfig) {
         $scope.embllishment1 = 0.40;
         $scope.embllishment2 = 0.20;
         $scope.embllishment3 = 0.25;
@@ -338,6 +338,7 @@
         $scope.changePackingCostPrint = function () {
             $rootScope.packingCostPrint = $scope.packingCostPrint;
         };
+        
 
         //view-12 funtiions
         $scope.imageSelected = function (input) {
