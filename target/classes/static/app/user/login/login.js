@@ -4,9 +4,9 @@
 
     var loginController = function ($scope,$location) {
 
-        $scope.login = function () {
-            $location.path('/1');
-        };
+//        $scope.login = function () {
+//            $location.path('/1');
+//        };
     };
 
 

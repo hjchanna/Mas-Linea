@@ -2,11 +2,35 @@
     angular.module("viewModule", ["ngAnimate"]);
 
 
-    var viewController = function ($scope, $rootScope,systemConfig) {
+    var viewController = function ($http, $scope, $rootScope, systemConfig) {
         $scope.embllishment1 = 0.40;
         $scope.embllishment2 = 0.20;
         $scope.embllishment3 = 0.25;
         $scope.embllishment4 = 0.60;
+
+        //main menu list
+//        $scope.categorys = [];
+//
+//        var url = systemConfig.apiUrl + "/api/menu-category";
+//
+//        $http.get(url)
+//                .success(function (data) {
+//                    $scope.categorys = data.categorys;
+//                });
+
+        // get styles 
+        $scope.styles = [];
+
+        var url = systemConfig.apiUrl + "/api/style";
+
+        $http.get(url)
+                .success(function (data) {
+                    $scope.styles = data.styles;
+//                    console.log(data.styles);
+                });
+
+
+
 
         if ($rootScope.solid) {
         } else {
@@ -79,6 +103,11 @@
         } else {
             $scope.targetFobPrint = "";
         }
+
+        //form 2 funtions
+        $scope.setFabricCost = function (indexNo) {
+            console.log(indexNo);
+        };
 
 
         //view-3 funtions
@@ -338,7 +367,7 @@
         $scope.changePackingCostPrint = function () {
             $rootScope.packingCostPrint = $scope.packingCostPrint;
         };
-        
+
 
         //view-12 funtiions
         $scope.imageSelected = function (input) {
