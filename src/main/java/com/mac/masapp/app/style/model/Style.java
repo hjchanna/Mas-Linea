@@ -3,6 +3,7 @@ package com.mac.masapp.app.style.model;
 import com.mac.masapp.app.cm.model.CmCost;
 import com.mac.masapp.app.fabric.model.FabricCost;
 import com.mac.masapp.app.tier.model.Tier;
+import com.mac.masapp.app.trim.model.TrimCost;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -26,8 +28,6 @@ public class Style {
     private Integer indexNo;
     @Column(name = "style_no")
     private String styleNo;
-    @Column(name = "trim_cost")
-    private double trimcost;
     @ManyToOne(optional = false, fetch = FetchType.EAGER)
     @JoinColumn(name = "tier")
     private Tier tier;
@@ -37,6 +37,9 @@ public class Style {
     @ManyToOne(optional = false, fetch = FetchType.EAGER)
     @JoinColumn(name = "cm_cost")
     private CmCost cmCost;
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
+    @JoinColumn(name = "trim_cost")
+    private TrimCost trimCost;
     private String picture;
 
     public Style() {
@@ -56,14 +59,6 @@ public class Style {
 
     public void setStyleNo(String styleNo) {
         this.styleNo = styleNo;
-    }
-
-    public double getTrimcost() {
-        return trimcost;
-    }
-
-    public void setTrimcost(double trimcost) {
-        this.trimcost = trimcost;
     }
 
     public Tier getTier() {
@@ -90,6 +85,14 @@ public class Style {
         this.cmCost = cmCost;
     }
 
+    public TrimCost getTrimCost() {
+        return trimCost;
+    }
+
+    public void setTrimCost(TrimCost trimCost) {
+        this.trimCost = trimCost;
+    }
+
     public String getPicture() {
         return picture;
     }
@@ -97,5 +100,8 @@ public class Style {
     public void setPicture(String picture) {
         this.picture = picture;
     }
+    
+    
+    
 
 }

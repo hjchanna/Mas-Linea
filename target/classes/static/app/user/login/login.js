@@ -2,11 +2,16 @@
     angular.module("loginModule", ["ngAnimate"]);
 
 
-    var loginController = function ($scope,$location) {
+    var loginController = function ($scope, $location) {
 
-//        $scope.login = function () {
-//            $location.path('/1');
-//        };
+        $scope.login = function (name) {
+            if (name == "admin") {
+                $location.path('/admin');
+            } else {
+                $location.path('/view-1');
+            }
+
+        };
     };
 
 
