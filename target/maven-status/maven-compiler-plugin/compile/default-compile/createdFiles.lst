@@ -16,3 +16,4 @@ com\mac\masapp\app\login\respond\LoginRequest.class
 com\mac\masapp\app\style\model\Style.class
 com\mac\masapp\app\tier\TierRepository.class
 com\mac\masapp\app\cm\model\CmCost.class
+com\mac\masapp\app\trim\model\TrimCost.class

@@ -1,6 +1,6 @@
 (function () {
     //index module
-    angular.module("indexModule", ["ngRoute", "loginModule", "viewModule", "adminModule"]);
+    angular.module("indexModule", ["ngRoute", "loginModule", "viewModule"]);
 
     //constants
     angular.module("indexModule").constant("systemConfig", {
@@ -12,69 +12,69 @@
         $routeProvider
                 //user
                 .when("/", {
-                    templateUrl: "app/user/login/login.html",
-                    controller: "loginController"
+                templateUrl: "app/user/login/login.html",
+                        controller: "loginController"
                 })
                 .when("/view-1", {
-                    templateUrl: "app/user/view/view1.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view1.html",
+                        controller: "viewController"
                 })
                 .when("/view-2", {
-                    templateUrl: "app/user/view/view2.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view2.html",
+                        controller: "viewController"
                 })
                 .when("/view-3", {
-                    templateUrl: "app/user/view/view3.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view3.html",
+                        controller: "viewController"
                 })
                 .when("/view-4", {
-                    templateUrl: "app/user/view/view4.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view4.html",
+                        controller: "viewController"
                 })
                 .when("/view-5", {
-                    templateUrl: "app/user/view/view5.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view5.html",
+                        controller: "viewController"
                 })
                 .when("/view-6", {
-                    templateUrl: "app/user/view/view6.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view6.html",
+                        controller: "viewController"
                 })
                 .when("/view-7", {
-                    templateUrl: "app/user/view/view7.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view7.html",
+                        controller: "viewController"
                 })
                 .when("/view-8", {
-                    templateUrl: "app/user/view/view8.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view8.html",
+                        controller: "viewController"
                 })
                 .when("/view-9", {
-                    templateUrl: "app/user/view/view9.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view9.html",
+                        controller: "viewController"
                 })
                 .when("/view-10", {
-                    templateUrl: "app/user/view/view10.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view10.html",
+                        controller: "viewController"
                 })
                 .when("/view-11", {
-                    templateUrl: "app/user/view/view11.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view11.html",
+                        controller: "viewController"
                 })
                 .when("/view-12", {
-                    templateUrl: "app/user/view/view12.html",
-                    controller: "viewController"
+                templateUrl: "app/user/view/view12.html",
+                        controller: "viewController"
                 })
-
                 //admin
+                .when("/style", {
+                    templateUrl: "app/admin/view/style.html",        
+                })
                 .when("/admin", {
-                    templateUrl: "app/admin/view/admin.html",
-                    controller: "adminController"
+                    templateUrl: "app/admin/index.html",        
                 })
 
 
                 .otherwise({
-                    redirectTo: "/"
-                });
-    });
-
-}());
+                redirectTo: "/"
+            });
+        });
+        }());
 
