@@ -70,6 +70,12 @@
                 .when("/admin", {
                     templateUrl: "app/admin/index.html",        
                 })
+                .when("/summary", {
+                    templateUrl: "app/admin/view/summary.html",        
+                })
+                .when("/registration", {
+                    templateUrl: "app/admin/view/registration.html",        
+                })
 
 
                 .otherwise({
