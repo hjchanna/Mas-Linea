@@ -9,13 +9,24 @@
     opacity: 0.5;
     /*border: 1px solid #cccc00;*/
 }
+
+.mygrid-wrapper-div{
+    white-space: nowrap;
+    overflow-x: visible;
+    overflow-y: hidden;
+    border: 1px solid #cccccc; 
+}
+.table{
+    margin-bottom: 0px !important;
+}
+
 .my-part{
     width: 20% !important;
 }
 .category{
     width: 100%;
     height: auto;
-    border: 1px solid #cccccc;
+    /*border: 1px solid #cccccc;*/
     margin-top: 25px;
 }
 .tier{
@@ -41,22 +52,19 @@
     margin-bottom: 0px !important;
 }
 #default-price{
-    margin-top: 68px;
+    margin-top: 91px;
 }
 #range-bar{
     margin-top: 100px;
 }
 #smv-cor{
-    margin-top: 15px;
+    margin-top: 34px;
 }
 #smv-total{
     margin-top: 35px;
 }
 #smv-top{
     margin-top: 90px;
-}
-#cmd-cost{
-    margin-top: 180px;
 }
 #top{
     margin-top: 10px;
